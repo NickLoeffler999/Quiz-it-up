@@ -10,17 +10,33 @@
     />
   </head>
   <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
     .button {
       background-color: purple;
       color: white;
+    }
+    .button:hover {
+      background-color: mediumorchid;
     }
 
     .button.is-light {
       background-color: lavender;
     }
+    .button.is-light:hover {
+      background-color: lightpink;
+    }
 
     .button.is-primary {
       background-color: rebeccapurple;
+    }
+
+    .button.is-primary:hover {
+      background-color: orchid;
     }
 
     .button.is-link {
@@ -29,6 +45,10 @@
 
     .button.is-info {
       background-color: blueviolet;
+    }
+
+    .button.is-info:hover {
+      background-color: darkorchid;
     }
 
     .button.is-success {
@@ -68,8 +88,8 @@
       </a>
     </header>
     <main>
-      <div class="container">
-        <section class="slide" id="start">
+      <div class="container is-centered">
+        <section class="slide is-centered">
           <h2 class="title is-2">Coding Quiz Challenge</h2>
           <p>
             Try to answer the following code-related questions within 10 seconds
@@ -111,8 +131,7 @@
         </section>
         <section class="slide" id="questions">
           <h2 class="title is-3">
-            The condition in an if / else statement is enclosed with an
-            _________.
+            The condition in an if / else statement is enclosed with _________.
           </h2>
           <div id="buttons" class="buttons">
             <button
@@ -240,7 +259,7 @@
           <h2 class="title is-3">All done!</h2>
           <p id="score"></p>
           <form onsubmit="setScore(event)">
-            <label for="initials">Enter initials: </label>
+            <label for="initials">Enter Your initials </label>
             <input type="text" id="initials" required />
             <button class="button is-primary" type="submit">Submit</button>
           </form>
