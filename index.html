@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz it Up!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="is-pulled-right">
+        <span id="time">Time: 10</span>
+      </nav>
+      <a href="#" class="button is-info header-link" onclick="showScores()">
+        View High Scores
+      </a>
+    </header>
+    <main>
+      <div class="container">
+        <section class="slide" id="start">
+          <h2 class="title is-2">Coding Quiz Challenge</h2>
+          <p>
+            Try to answer the following code-related questions within 10 seconds
+            each. Keep in mind that incorrect answers will penalize your
+            score/time by ten seconds!
+          </p>
+          <button class="button is-primary is-large" id="start">
+            Start Quiz
+          </button>
+        </section>
+        <section class="slide" id="questions">
+          <h1 class="title is-3">Commonly used data types do NOT include:</h1>
+          <div id="buttons" class="buttons">
+            <button
+              class="button"
+              onclick="checkAnswer({question:1, answer:1})"
+            >
+              1. Strings
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:1, answer:2})"
+            >
+              2. Booleans
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:1, answer:3})"
+            >
+              3. Alerts
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:1, answer:4})"
+            >
+              4. Numbers
+            </button>
+          </div>
+        </section>
+        <section class="slide" id="questions">
+          <h2 class="title is-3">
+            The condition in an if / else statement is enclosed with an
+            _________.
+          </h2>
+          <div id="buttons" class="buttons">
+            <button
+              class="button"
+              onclick="checkAnswer({question:2, answer:1})"
+            >
+              1. Quotes
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:2, answer:2})"
+            >
+              2. Curly Brackets
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:2, answer:3})"
+            >
+              3. Parentheses
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:2, answer:4})"
+            >
+              4. Square Brackets
+            </button>
+          </div>
+        </section>
+        <section class="slide" id="questions">
+          <h2 class="title is-3">
+            Arrays in JavaScript can be used to store _________.
+          </h2>
+          <div id="buttons" class="buttons">
+            <button
+              class="button"
+              onclick="checkAnswer({question:3, answer:1})"
+            >
+              1. Numbers and strings
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:3, answer:2})"
+            >
+              2. Other arrays
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:3, answer:3})"
+            >
+              3. Booleans
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:3, answer:4})"
+            >
+              4. All of the above
+            </button>
+          </div>
+        </section>
+        <section class="slide" id="questions">
+          <h2 class="title is-3">
+            String values must be enclosed within _________ when being assigned
+            to variables.
+          </h2>
+          <div id="buttons" class="buttons">
+            <button
+              class="button"
+              onclick="checkAnswer({question:4, answer:1})"
+            >
+              1. Commas
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:4, answer:2})"
+            >
+              2. Curly Brackets
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:4, answer:3})"
+            >
+              3. Quotes
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:4, answer:4})"
+            >
+              4. Parentheses
+            </button>
+          </div>
+        </section>
+        <section class="slide" id="questions">
+          <h2 class="title is-3">
+            A very useful tool used during development and debugging for
+            printing content to the debugger is:
+          </h2>
+          <div id="buttons" class="buttons">
+            <button
+              class="button"
+              onclick="checkAnswer({question:5, answer:1})"
+            >
+              1. JavaScript
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:5, answer:2})"
+            >
+              2. Terminal/Bash
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:5, answer:3})"
+            >
+              3. For Loops
+            </button>
+            <button
+              class="button"
+              onclick="checkAnswer({question:5, answer:4})"
+            >
+              4. Console.log
+            </button>
+          </div>
+        </section>
+        <section class="slide" id="end">
+          <h2 class="title is-3">All done!</h2>
+          <p id="score"></p>
+          <form onsubmit="setScore(event)">
+            <label for="initials">Enter initials: </label>
+            <input type="text" id="initials" required />
+            <button class="button is-primary" type="submit">Submit</button>
+          </form>
+        </section>
+        <section class="slide" id="scores">
+          <h2 class="title is-3">High Scores</h2>
+          <div id="highscores"></div>
+          <button class="button is-info" id="goBack" onclick="goBack()">
+            Back
+          </button>
+          <button class="button is-danger" id="clear" onclick="clearScores()">
+            Clear High Scores
+          </button>
+        </section>
+      </div>
+      <div class="answer" id="answerResponse"></div>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
