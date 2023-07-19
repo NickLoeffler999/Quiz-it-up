@@ -1,0 +1,47 @@
+.button {
+  background-color: purple;
+  color: white;
+}
+
+.button.is-light {
+  background-color: lavender;
+}
+
+.button.is-primary {
+  background-color: rebeccapurple;
+}
+
+.button.is-link {
+  background-color: mediumorchid;
+}
+
+.button.is-info {
+  background-color: blueviolet;
+}
+
+.button.is-success {
+  background-color: darkorchid;
+}
+
+.button.is-warning {
+  background-color: indigo;
+}
+
+.button.is-danger {
+  background-color: darkmagenta;
+}
+
+.button.is-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.button.is-medium {
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.button.is-large {
+  font-size: 20px;
+  padding: 15px 20px;
+}
